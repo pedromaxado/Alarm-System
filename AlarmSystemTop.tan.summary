@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.130 ns
+From           : pw[2]
+To             : FIRE_CONTROLER:c4|estado
+From Clock     : --
+To Clock       : SWITCH_4
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.573 ns
+From           : FPGA_ADCMAX1111:c2|bitsDados[4]
+To             : LED_3
+From Clock     : SysClk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.497 ns
+From           : ADC_DOUT
+To             : FPGA_ADCMAX1111:c2|bitsLidos[18]
+From Clock     : --
+To Clock       : SysClk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'SysClk'
+Slack          : -4.822 ns
+Required Time  : 66.66 MHz ( period = 15.001 ns )
+Actual Time    : 40.57 MHz ( period = 24.646 ns )
+From           : FPGA_ADCMAX1111:c2|indice[30]
+To             : FPGA_ADCMAX1111:c2|estado.transfering
+From Clock     : SysClk
+To Clock       : SysClk
+Failed Paths   : 32
+
+Type           : Clock Setup: 'SWITCH_2'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 304.04 MHz ( period = 3.289 ns )
+From           : ATTEMPTS_CONTROLER:c8|attempt[2]
+To             : ATTEMPTS_CONTROLER:c8|attempt[2]
+From Clock     : SWITCH_2
+To Clock       : SWITCH_2
+Failed Paths   : 0
+
+Type           : Clock Setup: 'SWITCH_4'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 304.04 MHz ( period = 3.289 ns )
+From           : FIRE_CONTROLER:c4|estado
+To             : FIRE_CONTROLER:c4|estado
+From Clock     : SWITCH_4
+To Clock       : SWITCH_4
+Failed Paths   : 0
+
+Type           : Clock Hold: 'SysClk'
+Slack          : 1.650 ns
+Required Time  : 66.66 MHz ( period = 15.001 ns )
+Actual Time    : N/A
+From           : FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|inClock
+To             : FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|inClock
+From Clock     : SysClk
+To Clock       : SysClk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 32
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,817 @@
+Simulator report for AlarmSystemTop
+Mon Nov 26 09:34:14 2012
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 1.0 ms        ;
+; Simulation Netlist Size     ; 241 nodes     ;
+; Simulation Coverage         ;      24.53 %  ;
+; Total Number of Transitions ; 1032000       ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270F256C5 ;
++-----------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      24.53 % ;
+; Total nodes checked                                 ; 241          ;
+; Total output ports checked                          ; 375          ;
+; Total output ports with complete 1/0-value coverage ; 92           ;
+; Total output ports with no 1/0-value coverage       ; 278          ;
+; Total output ports with no 1-value coverage         ; 278          ;
+; Total output ports with no 0-value coverage         ; 283          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                  ;
++---------------------------------------------------------------------+---------------------------------------------------------------------+------------------+
+; Node Name                                                           ; Output Port Name                                                    ; Output Port Type ;
++---------------------------------------------------------------------+---------------------------------------------------------------------+------------------+
+; |AlarmSystemTop|ONOFF_CONTROLER:c11|OnOffState                      ; |AlarmSystemTop|ONOFF_CONTROLER:c11|OnOffState                      ; regout           ;
+; |AlarmSystemTop|DANGER_CONTROLER:c10|DangerOut~0                    ; |AlarmSystemTop|DANGER_CONTROLER:c10|DangerOut~0                    ; combout          ;
+; |AlarmSystemTop|COUNTER:c7|cnt[1]                                   ; |AlarmSystemTop|COUNTER:c7|cnt[1]~1                                 ; cout0            ;
+; |AlarmSystemTop|COUNTER:c7|cnt[1]                                   ; |AlarmSystemTop|COUNTER:c7|cnt[1]~1COUT1_14                         ; cout1            ;
+; |AlarmSystemTop|COUNTER:c7|cnt[2]                                   ; |AlarmSystemTop|COUNTER:c7|cnt[2]~3                                 ; cout0            ;
+; |AlarmSystemTop|COUNTER:c7|cnt[2]                                   ; |AlarmSystemTop|COUNTER:c7|cnt[2]~3COUT1_16                         ; cout1            ;
+; |AlarmSystemTop|COUNTER:c7|cnt[3]                                   ; |AlarmSystemTop|COUNTER:c7|cnt[3]~5                                 ; cout0            ;
+; |AlarmSystemTop|COUNTER:c7|cnt[3]                                   ; |AlarmSystemTop|COUNTER:c7|cnt[3]~5COUT1_18                         ; cout1            ;
+; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|LessThan0~0               ; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|LessThan0~0               ; combout          ;
+; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|LessThan0~1               ; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|LessThan0~1               ; combout          ;
+; |AlarmSystemTop|ATTEMPTS_CONTROLER:c8|attempt[0]                    ; |AlarmSystemTop|ATTEMPTS_CONTROLER:c8|attempt[0]                    ; regout           ;
+; |AlarmSystemTop|ATTEMPTS_CONTROLER:c8|attempt[1]                    ; |AlarmSystemTop|ATTEMPTS_CONTROLER:c8|attempt[1]                    ; regout           ;
+; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|process_0~0               ; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|process_0~0               ; combout          ;
+; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|comb~2                    ; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|comb~2                    ; combout          ;
+; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|comb~3                    ; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|comb~3                    ; combout          ;
+; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|reseter~0                 ; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|reseter~0                 ; combout          ;
+; |AlarmSystemTop|ATTEMPTS_CONTROLER:c8|Equal0~0                      ; |AlarmSystemTop|ATTEMPTS_CONTROLER:c8|Equal0~0                      ; combout          ;
+; |AlarmSystemTop|ATTEMPTS_CONTROLER:c8|rightpw                       ; |AlarmSystemTop|ATTEMPTS_CONTROLER:c8|Equal0~1                      ; combout          ;
+; |AlarmSystemTop|ATTEMPTS_CONTROLER:c8|rightpw                       ; |AlarmSystemTop|ATTEMPTS_CONTROLER:c8|rightpw                       ; regout           ;
+; |AlarmSystemTop|DOOR_SENSOR:c6|sbopened                             ; |AlarmSystemTop|DOOR_SENSOR:c6|sbopened                             ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[14]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[14]                 ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[13]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[13]                 ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[12]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[12]                 ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[15]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~3                    ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[15]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[15]                 ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[11]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[11]                 ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[10]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[10]                 ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[8]                  ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[8]                  ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[9]                  ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~5                    ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[9]                  ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[9]                  ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[7]                  ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[7]                  ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[6]                  ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[6]                  ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[4]                  ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[4]                  ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[5]                  ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~6                    ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[5]                  ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[5]                  ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[0]                  ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[0]                  ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[3]                  ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[3]                  ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[2]                  ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[2]                  ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[1]                  ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~7                    ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[1]                  ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[1]                  ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|process_0~0 ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|process_0~0 ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~45                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~45                     ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~45                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~47                     ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~55                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~55                     ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~60                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~60                     ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~60                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~62                     ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~65                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~65                     ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~65                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~67                     ; cout             ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~70                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~70                     ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~70                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~72                     ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~75                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~75                     ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~75                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~77COUT1_184            ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~80                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~80                     ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~80                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~82COUT1_182            ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~85                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~85                     ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~85                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~87COUT1_180            ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~90                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~90                     ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~90                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~92                     ; cout             ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~95                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~95                     ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~95                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~97COUT1_178            ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~100                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~100                    ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~100                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~102                    ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~105                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~105                    ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~105                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~107                    ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~110                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~110                    ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~110                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~112                    ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~115                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~115                    ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~115                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~117                    ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~120                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~120                    ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~120                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~122                    ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~120                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~122COUT1_166           ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~125                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~125                    ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~125                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~127                    ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~125                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~127COUT1_164           ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~130                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~130                    ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~130                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~132                    ; cout             ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~135                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~135                    ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~135                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~137                    ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~135                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~137COUT1_168           ; cout1            ;
+; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|comb~4                    ; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|comb~4                    ; combout          ;
+; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|dangers                   ; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|dangers                   ; combout          ;
+; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|reseter                   ; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9|reseter                   ; combout          ;
+; |AlarmSystemTop|SWITCH_1                                            ; |AlarmSystemTop|SWITCH_1~corein                                     ; combout          ;
+; |AlarmSystemTop|pw[1]                                               ; |AlarmSystemTop|pw[1]~corein                                        ; combout          ;
+; |AlarmSystemTop|pw[4]                                               ; |AlarmSystemTop|pw[4]~corein                                        ; combout          ;
+; |AlarmSystemTop|pw[3]                                               ; |AlarmSystemTop|pw[3]~corein                                        ; combout          ;
+; |AlarmSystemTop|SWITCH_4                                            ; |AlarmSystemTop|SWITCH_4~corein                                     ; combout          ;
+; |AlarmSystemTop|SysClk                                              ; |AlarmSystemTop|SysClk~corein                                       ; combout          ;
+; |AlarmSystemTop|SWITCH_2                                            ; |AlarmSystemTop|SWITCH_2~corein                                     ; combout          ;
+; |AlarmSystemTop|SWITCH_3                                            ; |AlarmSystemTop|SWITCH_3~corein                                     ; combout          ;
+; |AlarmSystemTop|LED_1                                               ; |AlarmSystemTop|LED_1                                               ; padio            ;
+; |AlarmSystemTop|LED_2                                               ; |AlarmSystemTop|LED_2                                               ; padio            ;
++---------------------------------------------------------------------+---------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                           ;
++---------------------------------------------------------------------+---------------------------------------------------------------------------+------------------+
+; Node Name                                                           ; Output Port Name                                                          ; Output Port Type ;
++---------------------------------------------------------------------+---------------------------------------------------------------------------+------------------+
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[0]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[0]                           ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[1]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[1]                           ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[2]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[2]                           ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[3]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[3]                           ; regout           ;
+; |AlarmSystemTop|TEMP_CONTROLER:c3|LessThan0~0                       ; |AlarmSystemTop|TEMP_CONTROLER:c3|LessThan0~0                             ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[4]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[4]                           ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[5]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[5]                           ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[6]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[6]                           ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[7]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[7]                           ; regout           ;
+; |AlarmSystemTop|TEMP_CONTROLER:c3|LessThan0~1                       ; |AlarmSystemTop|TEMP_CONTROLER:c3|LessThan0~1                             ; combout          ;
+; |AlarmSystemTop|FIRE_CONTROLER:c4|FireOut~0                         ; |AlarmSystemTop|FIRE_CONTROLER:c4|FireOut~0                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitConfig                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitConfig                              ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|nivelStrobe                      ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|nivelStrobe                            ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|nivelDone                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|nivelDone                              ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[19]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[19]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|estado.transfering               ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|estado.transfering                     ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|nivelCS                          ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados~0                            ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|nivelCS                          ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|nivelCS                                ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[18]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[18]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[17]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[17]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[16]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[16]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[15]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[15]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[14]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[14]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[13]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[13]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[12]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[12]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[26] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[26]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[25] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[25]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[24] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[24]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[27] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~0          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[27] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[27]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[22] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[22]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[21] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[21]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[20] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[20]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[23] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~1          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[23] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[23]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[18] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[18]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[17] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[17]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[16] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[16]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[19] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~2          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[19] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[19]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[14] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[14]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[13] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[13]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[12] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[12]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[15] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~3          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[15] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[15]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~4    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~4          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[9]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[9]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[10] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[10]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[8]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[8]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[11] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~5          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[11] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[11]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[7]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[7]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[4]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[4]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[5]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[5]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[6]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~6          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[6]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[6]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[3]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[3]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[2]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[2]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[1]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[1]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[0]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~7          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[0]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[0]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~8    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~8          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[1]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[1]~1                            ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[1]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[1]~1COUT1_89                    ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[2]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[2]~3                            ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[2]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[2]~3COUT1_91                    ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[3]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[3]~5                            ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[3]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[3]~5COUT1_93                    ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Mux0~0                           ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Mux0~0                                 ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[4]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[4]                              ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[4]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[4]~7                            ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[4]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[4]~7COUT1_95                    ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~0                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~0                             ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~1                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~1                             ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[26]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[26]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[25]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[25]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[24]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[24]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[27]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~0                          ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[27]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[27]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[20]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[20]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[22]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[22]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[21]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[21]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[23]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~1                          ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[23]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[23]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[19]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[19]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[17]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[17]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[18]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~2                          ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[18]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[18]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~4                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~4                          ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~8                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~8                          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[5]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[5]~9                            ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[6]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[6]~11                           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[6]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[6]~11COUT1_97                   ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[7]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[7]~13                           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[7]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[7]~13COUT1_99                   ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~0                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~0                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~2                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~2                             ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~1                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~1                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[8]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[8]~15                           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[8]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[8]~15COUT1_101                  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[9]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[9]~17                           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[9]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[9]~17COUT1_103                  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[10]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[10]~19                          ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[11]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[11]~21                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[11]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[11]~21COUT1_105                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~2                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~2                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[12]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[12]~23                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[12]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[12]~23COUT1_107                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[13]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[13]~25                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[13]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[13]~25COUT1_109                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[14]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[14]~27                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[14]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[14]~27COUT1_111                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[15]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[15]~29                          ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~3                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~3                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[16]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[16]~31                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[16]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[16]~31COUT1_113                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[17]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[17]~33                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[17]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[17]~33COUT1_115                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[18]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[18]~35                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[18]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[18]~35COUT1_117                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[19]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[19]~37                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[19]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[19]~37COUT1_119                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~4                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~4                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[20]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[20]~39                          ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[21]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[21]~41                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[21]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[21]~41COUT1_121                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[22]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[22]~43                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[22]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[22]~43COUT1_123                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[23]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[23]~45                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[23]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[23]~45COUT1_125                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~5                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~5                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[24]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[24]~47                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[24]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[24]~47COUT1_127                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[25]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[25]~49                          ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[26]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[26]~51                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[26]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[26]~51COUT1_129                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[27]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[27]~53                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[27]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[27]~53COUT1_131                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~6                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~6                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[28]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[28]~55                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[28]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[28]~55COUT1_133                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[29]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[29]~57                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[29]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[29]~57COUT1_135                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[30]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[30]~59                          ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~7                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~7                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~8                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~8                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~9                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~9                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|estado~7                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|estado~7                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~3                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~3                             ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~4                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~4                             ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~5                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~5                             ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~0      ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~0            ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~5      ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~5            ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~5      ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~7            ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~5      ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~7COUT1_206   ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~10     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~10           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~10     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~12           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~10     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~12COUT1_204  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~15     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~15           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~15     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~17           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~15     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~17COUT1_202  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~20     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~20           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~20     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~22           ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~25     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~25           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~25     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~27           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~25     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~27COUT1_200  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~30     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~30           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~30     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~32           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~30     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~32COUT1_198  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~35     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~35           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~35     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~37           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~35     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~37COUT1_196  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~40     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~40           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~40     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~42           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~40     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~42COUT1_194  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~45     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~45           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~45     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~47           ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~50     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~50           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~50     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~52           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~50     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~52COUT1_192  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~55     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~55           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~55     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~57           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~55     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~57COUT1_190  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~60     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~60           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~60     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~62           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~60     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~62COUT1_188  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~65     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~65           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~65     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~67           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~65     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~67COUT1_186  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~70     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~70           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~70     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~72           ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~75     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~75           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~75     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~77           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~75     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~77COUT1_184  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~80     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~80           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~80     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~82           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~80     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~82COUT1_178  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~85     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~85           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~85     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~87           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~85     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~87COUT1_182  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~90     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~90           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~90     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~92           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~90     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~92COUT1_180  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~95     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~95           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~95     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~97           ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~100    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~100          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~100    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~102          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~100    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~102COUT1_176 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~105    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~105          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~105    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~107          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~105    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~107COUT1_170 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~110    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~110          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~110    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~112          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~110    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~112COUT1_174 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~115    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~115          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~115    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~117          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~115    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~117COUT1_172 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~120    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~120          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~120    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~122          ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~125    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~125          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~125    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~127          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~125    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~127COUT1_164 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~130    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~130          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~130    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~132          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~130    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~132COUT1_168 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~135    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~135          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~135    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~137          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~135    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~137COUT1_166 ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~0                      ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~0                            ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~5                      ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~5                            ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~5                      ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~7                            ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~5                      ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~7COUT1_206                   ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~10                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~10                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~10                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~12                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~10                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~12COUT1_204                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~15                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~15                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~15                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~17                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~15                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~17COUT1_202                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~20                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~20                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~20                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~22                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~20                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~22COUT1_196                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~25                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~25                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~25                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~27                           ; cout             ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~30                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~30                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~30                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~32                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~30                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~32COUT1_200                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~35                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~35                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~35                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~37                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~35                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~37COUT1_198                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~40                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~40                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~40                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~42                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~40                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~42COUT1_194                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~45                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~47COUT1_190                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~50                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~50                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~50                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~52                           ; cout             ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~55                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~57                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~55                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~57COUT1_192                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~60                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~62COUT1_186                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~70                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~72COUT1_188                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~75                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~77                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~80                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~82                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~85                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~87                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~95                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~97                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~100                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~102COUT1_176                 ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~105                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~107COUT1_174                 ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~110                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~112COUT1_172                 ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~115                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~117COUT1_170                 ; cout1            ;
+; |AlarmSystemTop|pw[5]                                               ; |AlarmSystemTop|pw[5]~corein                                              ; combout          ;
+; |AlarmSystemTop|pw[0]                                               ; |AlarmSystemTop|pw[0]~corein                                              ; combout          ;
+; |AlarmSystemTop|pw[2]                                               ; |AlarmSystemTop|pw[2]~corein                                              ; combout          ;
+; |AlarmSystemTop|ADC_DOUT                                            ; |AlarmSystemTop|ADC_DOUT~corein                                           ; combout          ;
+; |AlarmSystemTop|LED_3                                               ; |AlarmSystemTop|LED_3                                                     ; padio            ;
+; |AlarmSystemTop|ADC_CLK                                             ; |AlarmSystemTop|ADC_CLK                                                   ; padio            ;
+; |AlarmSystemTop|ADC_CSN                                             ; |AlarmSystemTop|ADC_CSN                                                   ; padio            ;
+; |AlarmSystemTop|ADC_DIN                                             ; |AlarmSystemTop|ADC_DIN                                                   ; padio            ;
+; |AlarmSystemTop|ADC_SSTRB                                           ; |AlarmSystemTop|ADC_SSTRB                                                 ; padio            ;
+; |AlarmSystemTop|ADC_SHDN                                            ; |AlarmSystemTop|ADC_SHDN                                                  ; padio            ;
+; |AlarmSystemTop|LED_4                                               ; |AlarmSystemTop|LED_4                                                     ; padio            ;
++---------------------------------------------------------------------+---------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                           ;
++---------------------------------------------------------------------+---------------------------------------------------------------------------+------------------+
+; Node Name                                                           ; Output Port Name                                                          ; Output Port Type ;
++---------------------------------------------------------------------+---------------------------------------------------------------------------+------------------+
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[0]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[0]                           ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[1]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[1]                           ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[2]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[2]                           ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[3]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[3]                           ; regout           ;
+; |AlarmSystemTop|TEMP_CONTROLER:c3|LessThan0~0                       ; |AlarmSystemTop|TEMP_CONTROLER:c3|LessThan0~0                             ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[4]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[4]                           ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[5]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[5]                           ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[6]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[6]                           ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[7]                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[7]                           ; regout           ;
+; |AlarmSystemTop|TEMP_CONTROLER:c3|LessThan0~1                       ; |AlarmSystemTop|TEMP_CONTROLER:c3|LessThan0~1                             ; combout          ;
+; |AlarmSystemTop|FIRE_CONTROLER:c4|FireOut~0                         ; |AlarmSystemTop|FIRE_CONTROLER:c4|FireOut~0                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitConfig                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitConfig                              ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|nivelStrobe                      ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|nivelStrobe                            ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|nivelDone                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|nivelDone                              ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[19]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[19]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|estado.transfering               ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|estado.transfering                     ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|estado.start                     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|estado.start                           ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|estado.idle                      ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|estado.idle                            ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|nivelCS                          ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados~0                            ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|nivelCS                          ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|nivelCS                                ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[18]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[18]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[17]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[17]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[16]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[16]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[15]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[15]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[14]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[14]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[13]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[13]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[12]                    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsLidos[12]                          ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|clkReset                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|clkReset                               ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|clkEnable                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|clkEnable                              ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[26] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[26]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[25] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[25]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[24] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[24]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[27] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~0          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[27] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[27]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[22] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[22]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[21] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[21]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[20] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[20]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[23] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~1          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[23] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[23]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[18] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[18]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[17] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[17]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[16] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[16]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[19] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~2          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[19] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[19]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[14] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[14]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[13] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[13]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[12] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[12]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[15] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~3          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[15] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[15]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~4    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~4          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[9]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[9]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[10] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[10]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[8]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[8]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[11] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~5          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[11] ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[11]       ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[7]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[7]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[4]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[4]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[5]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[5]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[6]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~6          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[6]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[6]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[3]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[3]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[2]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[2]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[1]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[1]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[0]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~7          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[0]  ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|counter[0]        ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~8    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Equal0~8          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[1]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[1]~1                            ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[1]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[1]~1COUT1_89                    ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[2]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[2]~3                            ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[2]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[2]~3COUT1_91                    ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[3]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[3]~5                            ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[3]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[3]~5COUT1_93                    ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Mux0~0                           ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Mux0~0                                 ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[4]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[4]                              ; regout           ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[4]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[4]~7                            ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[4]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[4]~7COUT1_95                    ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~0                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~0                             ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~1                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~1                             ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[26]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[26]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[25]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[25]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[24]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[24]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[27]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~0                          ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[27]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[27]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[20]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[20]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[22]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[22]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[21]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[21]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[23]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~1                          ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[23]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[23]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[19]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[19]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[16]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[16]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[17]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[17]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[18]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~2                          ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[18]                 ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|counter[18]                       ; regout           ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~4                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~4                          ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~8                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Equal0~8                          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[5]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[5]~9                            ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[6]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[6]~11                           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[6]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[6]~11COUT1_97                   ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[7]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[7]~13                           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[7]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[7]~13COUT1_99                   ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~0                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~0                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~2                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~2                             ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~1                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~1                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[8]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[8]~15                           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[8]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[8]~15COUT1_101                  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[9]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[9]~17                           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[9]                        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[9]~17COUT1_103                  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[10]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[10]~19                          ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[11]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[11]~21                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[11]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[11]~21COUT1_105                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~2                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~2                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[12]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[12]~23                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[12]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[12]~23COUT1_107                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[13]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[13]~25                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[13]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[13]~25COUT1_109                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[14]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[14]~27                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[14]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[14]~27COUT1_111                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[15]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[15]~29                          ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~3                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~3                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[16]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[16]~31                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[16]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[16]~31COUT1_113                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[17]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[17]~33                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[17]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[17]~33COUT1_115                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[18]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[18]~35                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[18]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[18]~35COUT1_117                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[19]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[19]~37                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[19]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[19]~37COUT1_119                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~4                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~4                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[20]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[20]~39                          ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[21]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[21]~41                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[21]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[21]~41COUT1_121                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[22]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[22]~43                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[22]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[22]~43COUT1_123                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[23]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[23]~45                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[23]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[23]~45COUT1_125                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~5                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~5                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[24]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[24]~47                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[24]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[24]~47COUT1_127                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[25]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[25]~49                          ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[26]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[26]~51                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[26]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[26]~51COUT1_129                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[27]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[27]~53                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[27]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[27]~53COUT1_131                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~6                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~6                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[28]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[28]~55                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[28]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[28]~55COUT1_133                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[29]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[29]~57                          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[29]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[29]~57COUT1_135                 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[30]                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|indice[30]~59                          ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~7                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~7                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~8                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~8                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~9                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Equal0~9                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|estado~7                         ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|estado~7                               ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~3                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~3                             ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~4                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~4                             ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~5                       ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|Decoder0~5                             ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~0      ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~0            ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~5      ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~5            ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~5      ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~7            ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~5      ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~7COUT1_206   ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~10     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~10           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~10     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~12           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~10     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~12COUT1_204  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~15     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~15           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~15     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~17           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~15     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~17COUT1_202  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~20     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~20           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~20     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~22           ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~25     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~25           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~25     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~27           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~25     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~27COUT1_200  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~30     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~30           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~30     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~32           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~30     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~32COUT1_198  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~35     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~35           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~35     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~37           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~35     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~37COUT1_196  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~40     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~40           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~40     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~42           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~40     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~42COUT1_194  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~45     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~45           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~45     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~47           ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~50     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~50           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~50     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~52           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~50     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~52COUT1_192  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~55     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~55           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~55     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~57           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~55     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~57COUT1_190  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~60     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~60           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~60     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~62           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~60     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~62COUT1_188  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~65     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~65           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~65     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~67           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~65     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~67COUT1_186  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~70     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~70           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~70     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~72           ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~75     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~75           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~75     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~77           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~75     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~77COUT1_184  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~80     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~80           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~80     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~82           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~80     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~82COUT1_178  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~85     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~85           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~85     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~87           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~85     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~87COUT1_182  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~90     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~90           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~90     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~92           ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~90     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~92COUT1_180  ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~95     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~95           ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~95     ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~97           ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~100    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~100          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~100    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~102          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~100    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~102COUT1_176 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~105    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~105          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~105    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~107          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~105    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~107COUT1_170 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~110    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~110          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~110    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~112          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~110    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~112COUT1_174 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~115    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~115          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~115    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~117          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~115    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~117COUT1_172 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~120    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~120          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~120    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~122          ; cout             ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~125    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~125          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~125    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~127          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~125    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~127COUT1_164 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~130    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~130          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~130    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~132          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~130    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~132COUT1_168 ; cout1            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~135    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~135          ; combout          ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~135    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~137          ; cout0            ;
+; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~135    ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1|Add0~137COUT1_166 ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~0                      ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~0                            ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~5                      ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~5                            ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~5                      ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~7                            ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~5                      ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~7COUT1_206                   ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~10                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~10                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~10                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~12                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~10                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~12COUT1_204                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~15                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~15                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~15                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~17                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~15                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~17COUT1_202                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~20                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~20                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~20                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~22                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~20                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~22COUT1_196                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~25                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~25                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~25                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~27                           ; cout             ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~30                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~30                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~30                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~32                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~30                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~32COUT1_200                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~35                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~35                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~35                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~37                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~35                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~37COUT1_198                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~40                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~40                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~40                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~42                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~40                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~42COUT1_194                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~45                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~47COUT1_190                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~50                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~50                           ; combout          ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~50                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~52                           ; cout             ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~55                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~57                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~55                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~57COUT1_192                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~60                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~62COUT1_186                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~70                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~72COUT1_188                  ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~75                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~77                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~80                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~82                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~85                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~87                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~95                     ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~97                           ; cout0            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~100                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~102COUT1_176                 ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~105                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~107COUT1_174                 ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~110                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~112COUT1_172                 ; cout1            ;
+; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~115                    ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1|Add0~117COUT1_170                 ; cout1            ;
+; |AlarmSystemTop|pw[5]                                               ; |AlarmSystemTop|pw[5]~corein                                              ; combout          ;
+; |AlarmSystemTop|pw[0]                                               ; |AlarmSystemTop|pw[0]~corein                                              ; combout          ;
+; |AlarmSystemTop|pw[2]                                               ; |AlarmSystemTop|pw[2]~corein                                              ; combout          ;
+; |AlarmSystemTop|ADC_DOUT                                            ; |AlarmSystemTop|ADC_DOUT~corein                                           ; combout          ;
+; |AlarmSystemTop|LED_3                                               ; |AlarmSystemTop|LED_3                                                     ; padio            ;
+; |AlarmSystemTop|ADC_CLK                                             ; |AlarmSystemTop|ADC_CLK                                                   ; padio            ;
+; |AlarmSystemTop|ADC_CSN                                             ; |AlarmSystemTop|ADC_CSN                                                   ; padio            ;
+; |AlarmSystemTop|ADC_DIN                                             ; |AlarmSystemTop|ADC_DIN                                                   ; padio            ;
+; |AlarmSystemTop|ADC_SSTRB                                           ; |AlarmSystemTop|ADC_SSTRB                                                 ; padio            ;
+; |AlarmSystemTop|ADC_SHDN                                            ; |AlarmSystemTop|ADC_SHDN                                                  ; padio            ;
+; |AlarmSystemTop|LED_4                                               ; |AlarmSystemTop|LED_4                                                     ; padio            ;
++---------------------------------------------------------------------+---------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Nov 26 09:34:08 2012
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off AlarmSystemTop -c AlarmSystemTop
+Info: Using vector source file "C:/Users/Pedro/Desktop/Alarm_System/AlarmSystemTop.vwf"
+Warning: Can't display state machine states -- register holding state machine bit "|AlarmSystemTop|FPGA_ADCMAX1111:c2|estado.finished" was synthesized away
+Info: Inverted registers were found during simulation
+    Info: Register: |AlarmSystemTop|FIRE_CONTROLER:c4|estado
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      24.53 %
+Info: Number of transitions in simulation is 1032000
+Info: Quartus II Simulator was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 152 megabytes
+    Info: Processing ended: Mon Nov 26 09:34:14 2012
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
+
+

@@ -1,0 +1,542 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+45
+3473
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+CLOCK_GENERATOR
+# storage
+db|AlarmSystemTop.(1).cnf
+db|AlarmSystemTop.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+clock_generator.vhdl
+b3198aaaf118615dfa1cd86dc6e2dd73
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+FPGA_ADCMAX1111
+# storage
+db|AlarmSystemTop.(2).cnf
+db|AlarmSystemTop.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+fpga_adcmax1111.vhdl
+875f4278e1d5386ce498cf1dd7bd91b5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(data)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+FPGA_ADCMAX1111:c2
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+CLOCK_GENERATOR_1HZ
+# storage
+db|AlarmSystemTop.(5).cnf
+db|AlarmSystemTop.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+clock_generator_1hz.vhd
+ddabe58a67573e6bfcf443a6839
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+CLOCK_GENERATOR_1HZ:c5
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+DANGER_CONTROLER
+# storage
+db|AlarmSystemTop.(10).cnf
+db|AlarmSystemTop.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+danger_controler.vhd
+44e62cf4481228f9b375afb4d0123b8e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+DANGER_CONTROLER:c10
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+FPGA_ADCMAX1111
+# storage
+db|AlarmSystemTop.(14).cnf
+db|AlarmSystemTop.(14).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+fpga_adcmax1111.vhdl
+875f4278e1d5386ce498cf1dd7bd91b5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+PW_INSERTION_CONTROLER
+# storage
+db|AlarmSystemTop.(9).cnf
+db|AlarmSystemTop.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+pw_insertion_controler.vhd
+a886beaac6a21ff33f08e9d9de28b64
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+min_count
+0
+PARAMETER_SIGNED_DEC
+USR
+max_count
+31
+PARAMETER_SIGNED_DEC
+USR
+min_attempt
+0
+PARAMETER_SIGNED_DEC
+USR
+max_attempt
+5
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+PW_INSERTION_CONTROLER:c9
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+DOOR_SENSOR
+# storage
+db|AlarmSystemTop.(6).cnf
+db|AlarmSystemTop.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+door_sensor.vhd
+aa4a46757c31b44add475cd3f276b65
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+DOOR_SENSOR:c6
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+COUNTER
+# storage
+db|AlarmSystemTop.(7).cnf
+db|AlarmSystemTop.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+6010e66e7c3c29c052d2dc505d384d96
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+min_count
+0
+PARAMETER_SIGNED_DEC
+USR
+max_count
+31
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+COUNTER:c7
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+ATTEMPTS_CONTROLER
+# storage
+db|AlarmSystemTop.(8).cnf
+db|AlarmSystemTop.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+attempts_controler.vhd
+286bc33bcd4aefcb7c1bb2957ad6154
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+min_attempt
+0
+PARAMETER_SIGNED_DEC
+USR
+max_attempt
+5
+PARAMETER_SIGNED_DEC
+USR
+ constraint(pw)
+5 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+ATTEMPTS_CONTROLER:c8
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+ONOFF_CONTROLER
+# storage
+db|AlarmSystemTop.(11).cnf
+db|AlarmSystemTop.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+onoff_controler.vhd
+dda8877f458496547029ab45f7aa91d0
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+ONOFF_CONTROLER:c11
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+CLOCK_GENERATOR_20HZ
+# storage
+db|AlarmSystemTop.(12).cnf
+db|AlarmSystemTop.(12).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+clock_generator_20hz.vhd
+891e30f9403555a226519a4269e557d1
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+CLOCK_GENERATOR_20HZ:c1
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+AlarmSystemTop
+# storage
+db|AlarmSystemTop.(0).cnf
+db|AlarmSystemTop.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+alarmsystemtop.vhd
+329c121eeb442a27cf435821c5ce319e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+TEMP_CONTROLER
+# storage
+db|AlarmSystemTop.(3).cnf
+db|AlarmSystemTop.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+temp_controler.vhd
+58bec2011a6f91d4a0b41f5d28e8fd
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(temp)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+TEMP_CONTROLER:c3
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+FIRE_CONTROLER
+# storage
+db|AlarmSystemTop.(4).cnf
+db|AlarmSystemTop.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+fire_controler.vhd
+de7c996c953c4148ad5cbd08a981d0
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(pw)
+5 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+FIRE_CONTROLER:c4
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

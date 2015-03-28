@@ -1,0 +1,388 @@
+|AlarmSystemTop
+pw[0] => FIRE_CONTROLER:c4.pw[0]
+pw[0] => ATTEMPTS_CONTROLER:c8.pw[0]
+pw[1] => FIRE_CONTROLER:c4.pw[1]
+pw[1] => ATTEMPTS_CONTROLER:c8.pw[1]
+pw[2] => FIRE_CONTROLER:c4.pw[2]
+pw[2] => ATTEMPTS_CONTROLER:c8.pw[2]
+pw[3] => FIRE_CONTROLER:c4.pw[3]
+pw[3] => ATTEMPTS_CONTROLER:c8.pw[3]
+pw[4] => FIRE_CONTROLER:c4.pw[4]
+pw[4] => ATTEMPTS_CONTROLER:c8.pw[4]
+pw[5] => FIRE_CONTROLER:c4.pw[5]
+pw[5] => ATTEMPTS_CONTROLER:c8.pw[5]
+SWITCH_1 => ONOFF_CONTROLER:c11.onoff
+SWITCH_2 => ATTEMPTS_CONTROLER:c8.inpw
+SWITCH_3 => DOOR_SENSOR:c6.ds
+SWITCH_4 => FIRE_CONTROLER:c4.onoff
+LED_1 <= ONOFF_CONTROLER:c11.OnOffOut
+LED_2 <= DANGER_CONTROLER:c10.DangerOut
+LED_3 <= FIRE_CONTROLER:c4.FireOut
+SysClk => CLOCK_GENERATOR_20HZ:c1.SysClk
+SysClk => CLOCK_GENERATOR_1HZ:c5.SysClk
+SysClk => FPGA_ADCMAX1111:c2.SysClk
+ADC_DOUT => FPGA_ADCMAX1111:c2.ADC_DOUT
+ADC_CLK <= FPGA_ADCMAX1111:c2.ADC_CLK
+ADC_CSN <= FPGA_ADCMAX1111:c2.ADC_CSN
+ADC_DIN <= FPGA_ADCMAX1111:c2.ADC_DIN
+ADC_SSTRB <= FPGA_ADCMAX1111:c2.ADC_SSTRB
+ADC_SHDN <= FPGA_ADCMAX1111:c2.ADC_SHDN
+LED_4 <= FPGA_ADCMAX1111:c2.Done
+
+
+|AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1
+SysClk => inClock.CLK
+SysClk => counter[0].CLK
+SysClk => counter[1].CLK
+SysClk => counter[2].CLK
+SysClk => counter[3].CLK
+SysClk => counter[4].CLK
+SysClk => counter[5].CLK
+SysClk => counter[6].CLK
+SysClk => counter[7].CLK
+SysClk => counter[8].CLK
+SysClk => counter[9].CLK
+SysClk => counter[10].CLK
+SysClk => counter[11].CLK
+SysClk => counter[12].CLK
+SysClk => counter[13].CLK
+SysClk => counter[14].CLK
+SysClk => counter[15].CLK
+SysClk => counter[16].CLK
+SysClk => counter[17].CLK
+SysClk => counter[18].CLK
+SysClk => counter[19].CLK
+SysClk => counter[20].CLK
+SysClk => counter[21].CLK
+SysClk => counter[22].CLK
+SysClk => counter[23].CLK
+SysClk => counter[24].CLK
+SysClk => counter[25].CLK
+SysClk => counter[26].CLK
+SysClk => counter[27].CLK
+Reset => inClock.ACLR
+Reset => counter[0].ACLR
+Reset => counter[1].ACLR
+Reset => counter[2].ACLR
+Reset => counter[3].ACLR
+Reset => counter[4].ACLR
+Reset => counter[5].ACLR
+Reset => counter[6].ACLR
+Reset => counter[7].ACLR
+Reset => counter[8].ACLR
+Reset => counter[9].ACLR
+Reset => counter[10].ACLR
+Reset => counter[11].ACLR
+Reset => counter[12].ACLR
+Reset => counter[13].ACLR
+Reset => counter[14].ACLR
+Reset => counter[15].ACLR
+Reset => counter[16].ACLR
+Reset => counter[17].ACLR
+Reset => counter[18].ACLR
+Reset => counter[19].ACLR
+Reset => counter[20].ACLR
+Reset => counter[21].ACLR
+Reset => counter[22].ACLR
+Reset => counter[23].ACLR
+Reset => counter[24].ACLR
+Reset => counter[25].ACLR
+Reset => counter[26].ACLR
+Reset => counter[27].ACLR
+Reset => process_0.IN0
+Enable => process_0.IN1
+Clock <= inClock.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AlarmSystemTop|FPGA_ADCMAX1111:c2
+StartRead => process_0.IN0
+StartRead => process_0.IN0
+StartRead => process_0.IN0
+StartRead => process_0.IN0
+Done <= nivelDone.DB_MAX_OUTPUT_PORT_TYPE
+Data[0] <= bitsDados[0].DB_MAX_OUTPUT_PORT_TYPE
+Data[1] <= bitsDados[1].DB_MAX_OUTPUT_PORT_TYPE
+Data[2] <= bitsDados[2].DB_MAX_OUTPUT_PORT_TYPE
+Data[3] <= bitsDados[3].DB_MAX_OUTPUT_PORT_TYPE
+Data[4] <= bitsDados[4].DB_MAX_OUTPUT_PORT_TYPE
+Data[5] <= bitsDados[5].DB_MAX_OUTPUT_PORT_TYPE
+Data[6] <= bitsDados[6].DB_MAX_OUTPUT_PORT_TYPE
+Data[7] <= bitsDados[7].DB_MAX_OUTPUT_PORT_TYPE
+SysClk => CLOCK_GENERATOR:clk1.SysClk
+SysClk => nivelStrobe.CLK
+SysClk => nivelCS.CLK
+SysClk => clkEnable.CLK
+SysClk => clkReset.CLK
+SysClk => bitsDados[0].CLK
+SysClk => bitsDados[1].CLK
+SysClk => bitsDados[2].CLK
+SysClk => bitsDados[3].CLK
+SysClk => bitsDados[4].CLK
+SysClk => bitsDados[5].CLK
+SysClk => bitsDados[6].CLK
+SysClk => bitsDados[7].CLK
+SysClk => nivelDone.CLK
+SysClk => estado~2.DATAIN
+ADC_CLK <= CLOCK_GENERATOR:clk1.Clock
+ADC_CSN <= nivelCS.DB_MAX_OUTPUT_PORT_TYPE
+ADC_DIN <= bitConfig.DB_MAX_OUTPUT_PORT_TYPE
+ADC_DOUT => bitsLidos[14].DATAIN
+ADC_DOUT => bitsLidos[15].DATAIN
+ADC_DOUT => bitsLidos[16].DATAIN
+ADC_DOUT => bitsLidos[17].DATAIN
+ADC_DOUT => bitsLidos[18].DATAIN
+ADC_DOUT => bitsLidos[19].DATAIN
+ADC_DOUT => bitsLidos[13].DATAIN
+ADC_DOUT => bitsLidos[12].DATAIN
+ADC_SSTRB <= nivelStrobe.DB_MAX_OUTPUT_PORT_TYPE
+ADC_SHDN <= <VCC>
+
+
+|AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1
+SysClk => inClock.CLK
+SysClk => counter[0].CLK
+SysClk => counter[1].CLK
+SysClk => counter[2].CLK
+SysClk => counter[3].CLK
+SysClk => counter[4].CLK
+SysClk => counter[5].CLK
+SysClk => counter[6].CLK
+SysClk => counter[7].CLK
+SysClk => counter[8].CLK
+SysClk => counter[9].CLK
+SysClk => counter[10].CLK
+SysClk => counter[11].CLK
+SysClk => counter[12].CLK
+SysClk => counter[13].CLK
+SysClk => counter[14].CLK
+SysClk => counter[15].CLK
+SysClk => counter[16].CLK
+SysClk => counter[17].CLK
+SysClk => counter[18].CLK
+SysClk => counter[19].CLK
+SysClk => counter[20].CLK
+SysClk => counter[21].CLK
+SysClk => counter[22].CLK
+SysClk => counter[23].CLK
+SysClk => counter[24].CLK
+SysClk => counter[25].CLK
+SysClk => counter[26].CLK
+SysClk => counter[27].CLK
+Reset => inClock.ACLR
+Reset => counter[0].ACLR
+Reset => counter[1].ACLR
+Reset => counter[2].ACLR
+Reset => counter[3].ACLR
+Reset => counter[4].ACLR
+Reset => counter[5].ACLR
+Reset => counter[6].ACLR
+Reset => counter[7].ACLR
+Reset => counter[8].ACLR
+Reset => counter[9].ACLR
+Reset => counter[10].ACLR
+Reset => counter[11].ACLR
+Reset => counter[12].ACLR
+Reset => counter[13].ACLR
+Reset => counter[14].ACLR
+Reset => counter[15].ACLR
+Reset => counter[16].ACLR
+Reset => counter[17].ACLR
+Reset => counter[18].ACLR
+Reset => counter[19].ACLR
+Reset => counter[20].ACLR
+Reset => counter[21].ACLR
+Reset => counter[22].ACLR
+Reset => counter[23].ACLR
+Reset => counter[24].ACLR
+Reset => counter[25].ACLR
+Reset => counter[26].ACLR
+Reset => counter[27].ACLR
+Reset => process_0.IN0
+Enable => process_0.IN1
+Clock <= inClock.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AlarmSystemTop|TEMP_CONTROLER:c3
+temp[0] => LessThan0.IN16
+temp[1] => LessThan0.IN15
+temp[2] => LessThan0.IN14
+temp[3] => LessThan0.IN13
+temp[4] => LessThan0.IN12
+temp[5] => LessThan0.IN11
+temp[6] => LessThan0.IN10
+temp[7] => LessThan0.IN9
+fire <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AlarmSystemTop|FIRE_CONTROLER:c4
+fire => FireOutS.DATAA
+pw[0] => Equal0.IN5
+pw[1] => Equal0.IN2
+pw[2] => Equal0.IN4
+pw[3] => Equal0.IN1
+pw[4] => Equal0.IN0
+pw[5] => Equal0.IN3
+onoff => estado.CLK
+FireOut <= FireOutS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AlarmSystemTop|CLOCK_GENERATOR_1HZ:c5
+SysClk => inClock.CLK
+SysClk => counter[0].CLK
+SysClk => counter[1].CLK
+SysClk => counter[2].CLK
+SysClk => counter[3].CLK
+SysClk => counter[4].CLK
+SysClk => counter[5].CLK
+SysClk => counter[6].CLK
+SysClk => counter[7].CLK
+SysClk => counter[8].CLK
+SysClk => counter[9].CLK
+SysClk => counter[10].CLK
+SysClk => counter[11].CLK
+SysClk => counter[12].CLK
+SysClk => counter[13].CLK
+SysClk => counter[14].CLK
+SysClk => counter[15].CLK
+SysClk => counter[16].CLK
+SysClk => counter[17].CLK
+SysClk => counter[18].CLK
+SysClk => counter[19].CLK
+SysClk => counter[20].CLK
+SysClk => counter[21].CLK
+SysClk => counter[22].CLK
+SysClk => counter[23].CLK
+SysClk => counter[24].CLK
+SysClk => counter[25].CLK
+SysClk => counter[26].CLK
+SysClk => counter[27].CLK
+Reset => inClock.ACLR
+Reset => counter[0].ACLR
+Reset => counter[1].ACLR
+Reset => counter[2].ACLR
+Reset => counter[3].ACLR
+Reset => counter[4].ACLR
+Reset => counter[5].ACLR
+Reset => counter[6].ACLR
+Reset => counter[7].ACLR
+Reset => counter[8].ACLR
+Reset => counter[9].ACLR
+Reset => counter[10].ACLR
+Reset => counter[11].ACLR
+Reset => counter[12].ACLR
+Reset => counter[13].ACLR
+Reset => counter[14].ACLR
+Reset => counter[15].ACLR
+Reset => counter[16].ACLR
+Reset => counter[17].ACLR
+Reset => counter[18].ACLR
+Reset => counter[19].ACLR
+Reset => counter[20].ACLR
+Reset => counter[21].ACLR
+Reset => counter[22].ACLR
+Reset => counter[23].ACLR
+Reset => counter[24].ACLR
+Reset => counter[25].ACLR
+Reset => counter[26].ACLR
+Reset => counter[27].ACLR
+Reset => process_0.IN0
+Enable => process_0.IN1
+Clock <= inClock.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AlarmSystemTop|DOOR_SENSOR:c6
+onoff => sbopened~reg0.DATAIN
+ds => sbopened~reg0.CLK
+reset => sbopened~reg0.ACLR
+sbopened <= sbopened~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AlarmSystemTop|COUNTER:c7
+enable => cnt[4].ENA
+enable => cnt[3].ENA
+enable => cnt[2].ENA
+enable => cnt[1].ENA
+enable => cnt[0].ENA
+reset => cnt[0].ACLR
+reset => cnt[1].ACLR
+reset => cnt[2].ACLR
+reset => cnt[3].ACLR
+reset => cnt[4].ACLR
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+count[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= cnt[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AlarmSystemTop|ATTEMPTS_CONTROLER:c8
+pw[0] => Equal0.IN5
+pw[1] => Equal0.IN1
+pw[2] => Equal0.IN4
+pw[3] => Equal0.IN3
+pw[4] => Equal0.IN0
+pw[5] => Equal0.IN2
+inpw => rightpw.CLK
+inpw => attempt[0].CLK
+inpw => attempt[1].CLK
+inpw => attempt[2].CLK
+onoff => rightpw.ACLR
+onoff => attempt[2].ACLR
+onoff => attempt[1].ACLR
+onoff => attempt[0].ACLR
+pwcorrect <= rightpw.DB_MAX_OUTPUT_PORT_TYPE
+attempts[0] <= attempt[0].DB_MAX_OUTPUT_PORT_TYPE
+attempts[1] <= attempt[1].DB_MAX_OUTPUT_PORT_TYPE
+attempts[2] <= attempt[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AlarmSystemTop|PW_INSERTION_CONTROLER:c9
+onoff => dangers.IN1
+onoff => dangers.OUTPUTSELECT
+onoff => reseter.OUTPUTSELECT
+count[0] => LessThan0.IN10
+count[0] => LessThan1.IN10
+count[0] => LessThan2.IN10
+count[1] => LessThan0.IN9
+count[1] => LessThan1.IN9
+count[1] => LessThan2.IN9
+count[2] => LessThan0.IN8
+count[2] => LessThan1.IN8
+count[2] => LessThan2.IN8
+count[3] => LessThan0.IN7
+count[3] => LessThan1.IN7
+count[3] => LessThan2.IN7
+count[4] => LessThan0.IN6
+count[4] => LessThan1.IN6
+count[4] => LessThan2.IN6
+pwcorrect => process_0.IN1
+pwcorrect => process_0.IN1
+attempts[0] => Equal0.IN2
+attempts[1] => Equal0.IN0
+attempts[2] => Equal0.IN1
+danger <= dangers.DB_MAX_OUTPUT_PORT_TYPE
+turn_off <= reseter.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AlarmSystemTop|DANGER_CONTROLER:c10
+danger => Equal0.IN0
+danger => Equal1.IN0
+danger => Equal2.IN1
+turn_off => Equal0.IN1
+turn_off => Equal1.IN1
+turn_off => Equal2.IN0
+DangerOut <= DangerTmp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AlarmSystemTop|ONOFF_CONTROLER:c11
+turn_off => OnOffState.ACLR
+onoff => OnOffState.CLK
+OnOffOut <= OnOffState.DB_MAX_OUTPUT_PORT_TYPE
+OnOffAll <= OnOffState.DB_MAX_OUTPUT_PORT_TYPE
+
+

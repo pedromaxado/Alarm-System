@@ -1,0 +1,427 @@
+Analysis & Synthesis report for AlarmSystemTop
+Mon Nov 26 16:55:46 2012
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |AlarmSystemTop|FPGA_ADCMAX1111:c2|estado
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: COUNTER:c7
+ 15. Parameter Settings for User Entity Instance: ATTEMPTS_CONTROLER:c8
+ 16. Parameter Settings for User Entity Instance: PW_INSERTION_CONTROLER:c9
+ 17. Port Connectivity Checks: "CLOCK_GENERATOR_1HZ:c5"
+ 18. Port Connectivity Checks: "CLOCK_GENERATOR_20HZ:c1"
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Mon Nov 26 16:55:45 2012        ;
+; Quartus II Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name               ; AlarmSystemTop                               ;
+; Top-level Entity Name       ; AlarmSystemTop                               ;
+; Family                      ; MAX II                                       ;
+; Total logic elements        ; 296                                          ;
+; Total pins                  ; 21                                           ;
+; Total virtual pins          ; 0                                            ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                                ;
++-----------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EPM1270F256C5      ;                    ;
+; Top-level entity name                                                      ; AlarmSystemTop     ; AlarmSystemTop     ;
+; Family name                                                                ; MAX II             ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+
+; CLOCK_GENERATOR.vhdl             ; yes             ; User VHDL File  ; C:/Users/Pedro/Desktop/Alarm_System/CLOCK_GENERATOR.vhdl       ;
+; FPGA_ADCMAX1111.vhdl             ; yes             ; User VHDL File  ; C:/Users/Pedro/Desktop/Alarm_System/FPGA_ADCMAX1111.vhdl       ;
+; TEMP_CONTROLER.vhd               ; yes             ; User VHDL File  ; C:/Users/Pedro/Desktop/Alarm_System/TEMP_CONTROLER.vhd         ;
+; DOOR_SENSOR.vhd                  ; yes             ; User VHDL File  ; C:/Users/Pedro/Desktop/Alarm_System/DOOR_SENSOR.vhd            ;
+; COUNTER.vhd                      ; yes             ; User VHDL File  ; C:/Users/Pedro/Desktop/Alarm_System/COUNTER.vhd                ;
+; ATTEMPTS_CONTROLER.vhd           ; yes             ; User VHDL File  ; C:/Users/Pedro/Desktop/Alarm_System/ATTEMPTS_CONTROLER.vhd     ;
+; PW_INSERTION_CONTROLER.vhd       ; yes             ; User VHDL File  ; C:/Users/Pedro/Desktop/Alarm_System/PW_INSERTION_CONTROLER.vhd ;
+; DANGER_CONTROLER.vhd             ; yes             ; User VHDL File  ; C:/Users/Pedro/Desktop/Alarm_System/DANGER_CONTROLER.vhd       ;
+; ONOFF_CONTROLER.vhd              ; yes             ; User VHDL File  ; C:/Users/Pedro/Desktop/Alarm_System/ONOFF_CONTROLER.vhd        ;
+; FIRE_CONTROLER.vhd               ; yes             ; User VHDL File  ; C:/Users/Pedro/Desktop/Alarm_System/FIRE_CONTROLER.vhd         ;
+; CLOCK_GENERATOR_1HZ.vhd          ; yes             ; User VHDL File  ; C:/Users/Pedro/Desktop/Alarm_System/CLOCK_GENERATOR_1HZ.vhd    ;
+; AlarmSystemTop.vhd               ; yes             ; User VHDL File  ; C:/Users/Pedro/Desktop/Alarm_System/AlarmSystemTop.vhd         ;
+; CLOCK_GENERATOR_20HZ.vhd         ; yes             ; User VHDL File  ; C:/Users/Pedro/Desktop/Alarm_System/CLOCK_GENERATOR_20HZ.vhd   ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Total logic elements                        ; 296    ;
+;     -- Combinational with no register       ; 144    ;
+;     -- Register only                        ; 58     ;
+;     -- Combinational with a register        ; 94     ;
+;                                             ;        ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 67     ;
+;     -- 3 input functions                    ; 6      ;
+;     -- 2 input functions                    ; 160    ;
+;     -- 1 input functions                    ; 4      ;
+;     -- 0 input functions                    ; 1      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 183    ;
+;     -- arithmetic mode                      ; 113    ;
+;     -- qfbk mode                            ; 0      ;
+;     -- register cascade mode                ; 0      ;
+;     -- synchronous clear/load mode          ; 0      ;
+;     -- asynchronous clear/load mode         ; 72     ;
+;                                             ;        ;
+; Total registers                             ; 152    ;
+; Total logic cells in carry chains           ; 118    ;
+; I/O pins                                    ; 21     ;
+; Maximum fan-out node                        ; SysClk ;
+; Maximum fan-out                             ; 100    ;
+; Total fan-out                               ; 931    ;
+; Average fan-out                             ; 2.94   ;
++---------------------------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                          ;
++--------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------+--------------+
+; Compilation Hierarchy Node     ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                     ; Library Name ;
++--------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------+--------------+
+; |AlarmSystemTop                ; 296 (0)     ; 152          ; 0          ; 21   ; 0            ; 144 (0)      ; 58 (0)            ; 94 (0)           ; 118 (0)         ; 0 (0)      ; |AlarmSystemTop                                         ; work         ;
+;    |ATTEMPTS_CONTROLER:c8|     ; 6 (6)       ; 4            ; 0          ; 0    ; 0            ; 2 (2)        ; 1 (1)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |AlarmSystemTop|ATTEMPTS_CONTROLER:c8                   ; work         ;
+;    |CLOCK_GENERATOR_1HZ:c5|    ; 63 (63)     ; 27           ; 0          ; 0    ; 0            ; 36 (36)      ; 13 (13)           ; 14 (14)          ; 27 (27)         ; 0 (0)      ; |AlarmSystemTop|CLOCK_GENERATOR_1HZ:c5                  ; work         ;
+;    |CLOCK_GENERATOR_20HZ:c1|   ; 66 (66)     ; 29           ; 0          ; 0    ; 0            ; 37 (37)      ; 17 (17)           ; 12 (12)          ; 28 (28)         ; 0 (0)      ; |AlarmSystemTop|CLOCK_GENERATOR_20HZ:c1                 ; work         ;
+;    |COUNTER:c7|                ; 5 (5)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; 4 (4)           ; 0 (0)      ; |AlarmSystemTop|COUNTER:c7                              ; work         ;
+;    |DANGER_CONTROLER:c10|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |AlarmSystemTop|DANGER_CONTROLER:c10                    ; work         ;
+;    |DOOR_SENSOR:c6|            ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |AlarmSystemTop|DOOR_SENSOR:c6                          ; work         ;
+;    |FIRE_CONTROLER:c4|         ; 4 (4)       ; 1            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |AlarmSystemTop|FIRE_CONTROLER:c4                       ; work         ;
+;    |FPGA_ADCMAX1111:c2|        ; 140 (73)    ; 84           ; 0          ; 0    ; 0            ; 56 (18)      ; 26 (3)            ; 58 (52)          ; 59 (31)         ; 0 (0)      ; |AlarmSystemTop|FPGA_ADCMAX1111:c2                      ; work         ;
+;       |CLOCK_GENERATOR:clk1|   ; 67 (67)     ; 29           ; 0          ; 0    ; 0            ; 38 (38)      ; 23 (23)           ; 6 (6)            ; 28 (28)         ; 0 (0)      ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1 ; work         ;
+;    |ONOFF_CONTROLER:c11|       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |AlarmSystemTop|ONOFF_CONTROLER:c11                     ; work         ;
+;    |PW_INSERTION_CONTROLER:c9| ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |AlarmSystemTop|PW_INSERTION_CONTROLER:c9               ; work         ;
++--------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------+
+; State Machine - |AlarmSystemTop|FPGA_ADCMAX1111:c2|estado                              ;
++--------------------+-----------------+--------------------+--------------+-------------+
+; Name               ; estado.finished ; estado.transfering ; estado.start ; estado.idle ;
++--------------------+-----------------+--------------------+--------------+-------------+
+; estado.idle        ; 0               ; 0                  ; 0            ; 0           ;
+; estado.start       ; 0               ; 0                  ; 1            ; 1           ;
+; estado.transfering ; 0               ; 1                  ; 0            ; 1           ;
+; estado.finished    ; 1               ; 0                  ; 0            ; 1           ;
++--------------------+-----------------+--------------------+--------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; PW_INSERTION_CONTROLER:c9|reseter                  ; GND                 ; yes                    ;
+; PW_INSERTION_CONTROLER:c9|dangers                  ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 2  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++---------------------------------------+------------------------------------------------+
+; Register name                         ; Reason for Removal                             ;
++---------------------------------------+------------------------------------------------+
+; FPGA_ADCMAX1111:c2|bitsDados[0]       ; Lost fanout                                    ;
+; FPGA_ADCMAX1111:c2|bitsLidos[19]      ; Lost fanout                                    ;
+; FPGA_ADCMAX1111:c2|estado.finished    ; Lost fanout                                    ;
+; CLOCK_GENERATOR_1HZ:c5|counter[0]     ; Merged with CLOCK_GENERATOR_20HZ:c1|counter[0] ;
+; CLOCK_GENERATOR_1HZ:c5|counter[1]     ; Merged with CLOCK_GENERATOR_20HZ:c1|counter[1] ;
+; Total Number of Removed Registers = 5 ;                                                ;
++---------------------------------------+------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                   ;
++---------------------------------+--------------------+----------------------------------------+
+; Register name                   ; Reason for Removal ; Registers Removed due to This Register ;
++---------------------------------+--------------------+----------------------------------------+
+; FPGA_ADCMAX1111:c2|bitsDados[0] ; Lost Fanouts       ; FPGA_ADCMAX1111:c2|bitsLidos[19]       ;
++---------------------------------+--------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 152   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 72    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |AlarmSystemTop|FPGA_ADCMAX1111:c2|bitsDados[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: COUNTER:c7 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; min_count      ; 0     ; Signed Integer                 ;
+; max_count      ; 31    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ATTEMPTS_CONTROLER:c8 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; min_attempt    ; 0     ; Signed Integer                            ;
+; max_attempt    ; 5     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PW_INSERTION_CONTROLER:c9 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; min_count      ; 0     ; Signed Integer                                ;
+; max_count      ; 31    ; Signed Integer                                ;
+; min_attempt    ; 0     ; Signed Integer                                ;
+; max_attempt    ; 5     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "CLOCK_GENERATOR_1HZ:c5" ;
++--------+-------+----------+------------------------+
+; Port   ; Type  ; Severity ; Details                ;
++--------+-------+----------+------------------------+
+; reset  ; Input ; Info     ; Stuck at GND           ;
+; enable ; Input ; Info     ; Stuck at VCC           ;
++--------+-------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "CLOCK_GENERATOR_20HZ:c1" ;
++--------+-------+----------+-------------------------+
+; Port   ; Type  ; Severity ; Details                 ;
++--------+-------+----------+-------------------------+
+; reset  ; Input ; Info     ; Stuck at GND            ;
+; enable ; Input ; Info     ; Stuck at VCC            ;
++--------+-------+----------+-------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Nov 26 16:55:44 2012
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AlarmSystemTop -c AlarmSystemTop
+Info: Found 2 design units, including 1 entities, in source file clock_generator.vhdl
+    Info: Found design unit 1: CLOCK_GENERATOR-ARCH_CLOCK_GENERATOR
+    Info: Found entity 1: CLOCK_GENERATOR
+Info: Found 2 design units, including 1 entities, in source file fpga_adcmax1111.vhdl
+    Info: Found design unit 1: FPGA_ADCMAX1111-ARCH_FPGA_ADCMAX1111
+    Info: Found entity 1: FPGA_ADCMAX1111
+Info: Found 2 design units, including 1 entities, in source file temp_controler.vhd
+    Info: Found design unit 1: TEMP_CONTROLER-ARCH_TEMP_CONTROLER
+    Info: Found entity 1: TEMP_CONTROLER
+Info: Found 2 design units, including 1 entities, in source file door_sensor.vhd
+    Info: Found design unit 1: DOOR_SENSOR-ARCH_DOOR_SENSOR
+    Info: Found entity 1: DOOR_SENSOR
+Info: Found 2 design units, including 1 entities, in source file counter.vhd
+    Info: Found design unit 1: COUNTER-ARCH_COUNTER
+    Info: Found entity 1: COUNTER
+Info: Found 2 design units, including 1 entities, in source file attempts_controler.vhd
+    Info: Found design unit 1: ATTEMPTS_CONTROLER-ARCH_ATTEMPTS_CONTROLER
+    Info: Found entity 1: ATTEMPTS_CONTROLER
+Info: Found 2 design units, including 1 entities, in source file pw_insertion_controler.vhd
+    Info: Found design unit 1: PW_INSERTION_CONTROLER-ARCH_PW_INSERTION_CONTROLER
+    Info: Found entity 1: PW_INSERTION_CONTROLER
+Info: Found 2 design units, including 1 entities, in source file danger_controler.vhd
+    Info: Found design unit 1: DANGER_CONTROLER-ARCH_DANGER_CONTROLER
+    Info: Found entity 1: DANGER_CONTROLER
+Info: Found 2 design units, including 1 entities, in source file onoff_controler.vhd
+    Info: Found design unit 1: ONOFF_CONTROLER-ARCH_ONOFF_CONTROLER
+    Info: Found entity 1: ONOFF_CONTROLER
+Info: Found 2 design units, including 1 entities, in source file fire_controler.vhd
+    Info: Found design unit 1: FIRE_CONTROLER-ARCH_FIRE_CONTROLER
+    Info: Found entity 1: FIRE_CONTROLER
+Info: Found 2 design units, including 1 entities, in source file clock_generator_1hz.vhd
+    Info: Found design unit 1: CLOCK_GENERATOR_1HZ-ARCH_CLOCK_GENERATOR_1HZ
+    Info: Found entity 1: CLOCK_GENERATOR_1HZ
+Info: Found 2 design units, including 1 entities, in source file alarmsystemtop.vhd
+    Info: Found design unit 1: AlarmSystemTop-ARCH_AlarmSystemTop
+    Info: Found entity 1: AlarmSystemTop
+Info: Found 2 design units, including 1 entities, in source file clock_generator_20hz.vhd
+    Info: Found design unit 1: CLOCK_GENERATOR_20HZ-ARCH_CLOCK_GENERATOR_20HZ
+    Info: Found entity 1: CLOCK_GENERATOR_20HZ
+Info: Elaborating entity "AlarmSystemTop" for the top level hierarchy
+Info: Elaborating entity "CLOCK_GENERATOR_20HZ" for hierarchy "CLOCK_GENERATOR_20HZ:c1"
+Info: Elaborating entity "FPGA_ADCMAX1111" for hierarchy "FPGA_ADCMAX1111:c2"
+Info: Elaborating entity "CLOCK_GENERATOR" for hierarchy "FPGA_ADCMAX1111:c2|CLOCK_GENERATOR:clk1"
+Info: Elaborating entity "TEMP_CONTROLER" for hierarchy "TEMP_CONTROLER:c3"
+Info: Elaborating entity "FIRE_CONTROLER" for hierarchy "FIRE_CONTROLER:c4"
+Info: Elaborating entity "CLOCK_GENERATOR_1HZ" for hierarchy "CLOCK_GENERATOR_1HZ:c5"
+Info: Elaborating entity "DOOR_SENSOR" for hierarchy "DOOR_SENSOR:c6"
+Info: Elaborating entity "COUNTER" for hierarchy "COUNTER:c7"
+Info: Elaborating entity "ATTEMPTS_CONTROLER" for hierarchy "ATTEMPTS_CONTROLER:c8"
+Info: Elaborating entity "PW_INSERTION_CONTROLER" for hierarchy "PW_INSERTION_CONTROLER:c9"
+Warning (10631): VHDL Process Statement warning at PW_INSERTION_CONTROLER.vhd(41): inferring latch(es) for signal or variable "dangers", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at PW_INSERTION_CONTROLER.vhd(41): inferring latch(es) for signal or variable "reseter", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "reseter" at PW_INSERTION_CONTROLER.vhd(41)
+Info (10041): Inferred latch for "dangers" at PW_INSERTION_CONTROLER.vhd(41)
+Info: Elaborating entity "DANGER_CONTROLER" for hierarchy "DANGER_CONTROLER:c10"
+Info: Elaborating entity "ONOFF_CONTROLER" for hierarchy "ONOFF_CONTROLER:c11"
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ADC_SHDN" is stuck at VCC
+Info: 3 registers lost all their fanouts during netlist optimizations. The first 3 are displayed below.
+    Info: Register "FPGA_ADCMAX1111:c2|bitsDados[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "FPGA_ADCMAX1111:c2|bitsLidos[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "FPGA_ADCMAX1111:c2|estado.finished" lost all its fanouts during netlist optimizations.
+Info: Implemented 317 device resources after synthesis - the final resource count might be different
+    Info: Implemented 12 input pins
+    Info: Implemented 9 output pins
+    Info: Implemented 296 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 231 megabytes
+    Info: Processing ended: Mon Nov 26 16:55:46 2012
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
